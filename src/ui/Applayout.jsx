@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import HeaderNav, { TemporaryDrawer } from "../components/Headernav";
-import SideNav from "../components/Sidenav";
+import HeaderNav from "../components/Headernav";
+import SideNav, { TemporaryDrawer } from "../components/Sidenav";
 
 export default function Applayout() {
   return (
