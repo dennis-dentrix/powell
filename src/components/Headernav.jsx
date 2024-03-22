@@ -22,7 +22,7 @@ import user from "../assets/user.jpg";
 
 export default function HeaderNav() {
   return (
-    <div className="flex items-center justify-between gap-6 ">
+    <div className="flex items-center justify-between gap-6 my-3">
       <div className="flex items-center bg-white w-full space-x-4">
         <div className="flex items-center justify-between  w-full border rounded-md p-2">
           <div className="flex items-center gap-3 w-full ">

@@ -5,6 +5,9 @@ import Signup from "./auth/Signup";
 import Reports from "./pages/Reports";
 // import HomeDashboard from "./features/HomeDashboard";
 import HomeDashboard from "./pages/HomeDashboard";
+import ChartComponents from "./components/ChartComponents";
+import FollowupReports from "./components/FollowupReports";
+import Assigned from "./features/Reports/Assigned";
 
 export default function App() {
   return (
@@ -13,7 +16,13 @@ export default function App() {
         <Route index element={<Navigate replace to="login" />} />
         <Route element={<Applayout />}>
           <Route path="/home" element={<HomeDashboard />} />
-          <Route path="/reports" element={<Reports />} />
+          <Route element={<Reports />}>
+            <Route index element={<Navigate replace to={"/reports"} />} />
+
+            <Route path="/reports" element={<ChartComponents />} />
+            <Route path="in-progress" element={<FollowupReports />} />
+            <Route path="/assigned" element={<Assigned />} />
+          </Route>
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
